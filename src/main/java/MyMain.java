@@ -2,8 +2,8 @@ public class MyMain {
     // Rolls a single die
     // Returns a random integer between 1 and 6
     public static int rollDie() {
-        // REPLACE YOUR CODE HERE
-        return -1;
+        int random = (int) (Math.random() *6 + 1);
+        return random;
     }
 
     // Calculate the probability of rolling at least one 6 when rolling 
@@ -11,29 +11,58 @@ public class MyMain {
     // Returns in the answer as a double corresponding to the percentage
     // For example, 75.5% would be 75.5
     public static double probabilityOneSix() {
-        // REPLACE WITH YOUR CODE HERE
-
-        // Your code should roll 6 dice 10,000 times, so you should have a
-        // for loop such as:
+        double counter = 0;
         for (int i = 0; i < 10000; i++) {
-
-        }
-
-        return -1.0;
+            int x = 0;
+            for (int j = 0; j < 6 && x < 1; j++) {
+                int random = (int) (Math.random() * 6) + 1;
+                if (random == 6) {
+                    x += 1;
+                }
+                if (x == 1){
+                    counter +=1;
+                }}}
+                double end = (counter/10000) * 100;
+            return end;
     }
-
     // Calculate the probability of rolling at least two 6's when rolling 
     // twelve dice. Uses 10000 trials.
     public static double probabilityTwoSixes() {
-        // REPLACE WITH YOUR CODE HERE
-        return -1.0;
+        double counter = 0;
+        for (int i = 0; i < 10000; i++){
+            int x = 0;
+            for (int j=0; j<12 && x<2; j++){
+                int random = (int) (Math.random() *6) + 1;
+                if (random ==6){
+                    x += 1;
+                }
+                if (x == 2){
+                    counter +=1;
+                }
+            }
+        }
+        double end = (counter/10000) * 100;
+        return end;
     }
 
     // Calculate the probability of rolling at least three 6's when rolling
     // eighteen dice. Uses 10000 trials.
     public static double probabilityThreeSixes() {
-        // REPLACE WITH YOUR CODE HERE
-        return -1.0;
+        double counter = 0;
+        for (int i = 0; i < 10000; i++){
+            int x = 0;
+            for (int j=0; j<18 && x<3; j++){
+                int random = (int) (Math.random() *6) + 1;
+                if (random ==6){
+                    x += 1;
+                }
+                if (x == 3){
+                    counter +=1;
+                }
+            }
+        }
+        double end = (counter/10000) * 100;
+        return end;
     }
 
     public static void main(String[] args) {
